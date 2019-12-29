@@ -310,7 +310,7 @@ int main(int argc, const char *argv[])
         }
 
         // Create a Frame object
-        Frame f(id, impath, time_stamps[id], *orb_extractor);
+        Frame f(id, impath, time_stamps[count-1], *orb_extractor);
 
         toc = clock();
         double frame_creation_time = (double) (toc - tic) / CLOCKS_PER_SEC;
