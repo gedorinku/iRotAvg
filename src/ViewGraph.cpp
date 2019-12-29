@@ -1246,7 +1246,7 @@ void ViewGraph::savePosesForGedorinku(const std::string &filename, const std::ve
 
         const auto &pose = view->pose();
         const auto time = view->frame().getTimeStamp();
-        const auto &R = pose.R();
+        const auto R = pose.R().inv();
         const auto &t = pose.t();
 
         f << setprecision(9) << time << " "
